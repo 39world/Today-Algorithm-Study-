@@ -12,7 +12,7 @@ while start <= end:
     mid = (start + end) // 2;
     for x in array :
         if x > mid:
-            totla += x-mid;
+            total += x-mid;
 
     if total < m :
         end = mid -1;

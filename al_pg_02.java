@@ -18,7 +18,7 @@
 
 		s.add(cnt);
 	}
-
+0
 	int[] answer = new int[s.size()];
 
 	for (int i = 0; i < answer.length; i++) {
