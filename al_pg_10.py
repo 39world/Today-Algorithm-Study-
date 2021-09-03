@@ -12,3 +12,17 @@ def solution(brown, yellow):
             return answer
 
 solution(10,2)
+
+
+def solution(estimates, k):
+    answer = 0;
+    for start in range(len(estimates)-k+1):
+        temp_answer = estimates[start]
+        for i in range(1,k):
+            temp_answer += estimates[start+i]
+            
+        if temp_answer > answer :
+            answer = temp_answer
+    
+    
+    return answer
