@@ -1,0 +1,27 @@
+import java.util.*;
+
+class Solution {
+
+    public int solution(int[] T, int[] A) {
+        // write your code in Java SE 8
+
+        boolean[] skillCheck = new boolean[T.length];
+        skillCheck[0] = true;
+        int cnt = 1;
+        
+        Stack<Integer> stack = new Stack<>();
+        for(int i = 0; i<A.length;i++){
+            stack.push(A[i]);        
+        }
+
+        while(!stack.empty()){
+            int wantSkill = stack.pop();
+            if(!skillCheck[wantSkill]){
+                skillCheck[wantSkill] = true;
+                cnt++;
+                stack.push(T[wantSkill]);
+            }
+        }
+        return cnt;
+    }
+}
